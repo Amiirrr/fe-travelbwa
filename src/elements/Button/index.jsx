@@ -48,18 +48,21 @@ const Button = (props) => {
                     target={props.target === '_blank' ? '_blank' : undefined}
                     rel={props.terget === '_blank' ? "nooperner norefferer" : undefined}
                 >
-                    {props.children}
+                    linkd{props.children}
                 </a>
             )
         } else {
-            <Link
-                to={props.href}
-                className={className.join(' ')}
-                style={props.style}
-                onClick={onClick}
-            >
-                {props.children}
-            </Link>
+            return (
+                <Link
+                    to={props.href}
+                    className={className.join(' ')}
+                    style={props.style}
+                    onClick={onClick}
+                >
+                    {props.children}
+                </Link>
+
+            )
         }
     }
 
@@ -74,12 +77,14 @@ const Button = (props) => {
     )
 }
 
-Button.PropTypes = {
-    type: PropTypes.oneOf(["Button", "Link"]),
+Button.propTypes = {
+    type: PropTypes.oneOf(["button", "link"]),
     onclick: PropTypes.func,
     href: PropTypes.string,
     target: PropTypes.string,
     className: PropTypes.string,
+    isPrimary: PropTypes.bool,
+    isLight: PropTypes.bool,
     isDisabled: PropTypes.bool,
     isExternal: PropTypes.bool,
     isLoading: PropTypes.bool,

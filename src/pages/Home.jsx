@@ -1,8 +1,11 @@
 import React from 'react'
+import IconText from '@/components/IconText'
 
 const Home = () => {
     return (
-        <div>Home</div>
+        <div>
+            <IconText />
+        </div>
     )
 }
 
