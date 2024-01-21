@@ -1,7 +1,54 @@
 @use '../custom' as *;
 
-.footer {
-    .test {
-        color: $gray-900;
+footer {
+    border-top: 1px solid $gray-200;
+    // height: 500px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .information {
+        display: flex;
+        width: 100%;
+
+        div:first-child {
+            flex: 2;
+
+            p {
+                margin-top: 10px;
+                width: 50%;
+            }
+        }
+
+        div:nth-child(2) {
+            flex: 1;
+        }
+
+        div:nth-child(3) {
+            flex: 1;
+        }
+
+        div:nth-child(4) {
+            flex: 1;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            color: $secondary;
+            margin-bottom: 20px;
+        }
+    }
+
+    p {
+        color: $gray-400;
     }
 }
