@@ -1,0 +1,88 @@
+@use '../custom' as *;
+
+.most-picked {
+    $card_height : 215px;
+    margin-bottom: 200px;
+
+    .title {
+        color: $secondary;
+        margin-bottom: 30px;
+    }
+
+    .gallery {
+        display: flex;
+        gap: 30px;
+
+        @media (max-width: 960px) {
+            flex-direction: column;
+        }
+
+        .card {
+            border-radius: 15px;
+            position: relative;
+            border: none;
+            color: white;
+            overflow: hidden;
+
+            img {
+                border-radius: inherit;
+                filter: brightness(80%);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .price {
+                position: absolute;
+                top: 0;
+                right: 0;
+
+                background-color: #FF498B;
+                padding: 10px 20px;
+                border-radius: 0 15px 0 15px;
+            }
+
+            .details {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                margin: 0 0 20px 20px;
+
+                .hotels {
+                    font-size: 20px;
+                }
+
+                .location {
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .card-big {
+            flex: 1;
+            width: 100%;
+            height: calc(($card_height * 2) + 30px);
+
+            @media (max-width: 960px) {
+                max-height: 300px;
+            }
+        }
+
+        .others {
+            flex: 2;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .card {
+                height: $card_height;
+                min-width: calc(50% - 15px);
+            }
+        }
+
+    }
+
+
+
+
+}

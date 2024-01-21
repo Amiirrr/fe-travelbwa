@@ -15,10 +15,15 @@ header .navbar .navbar-nav li.nav-item a.nav-link:hover {
   color: #5c12d4;
 }
 
+.footer .test {
+  color: #212529;
+}
+
 .hero {
   display: flex;
   flex-direction: row;
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 .hero .content {
   flex: 1;
@@ -31,10 +36,10 @@ header .navbar .navbar-nav li.nav-item a.nav-link:hover {
   margin-bottom: 20px;
 }
 .hero .content .description {
-  color: #adb5bd;
+  color: #ced4da;
   width: 55%;
   margin-bottom: 30px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .hero .content .btn {
   padding: 10px 50px;
@@ -73,8 +78,76 @@ header .navbar .navbar-nav li.nav-item a.nav-link:hover {
   margin-left: auto;
 }
 
-.footer .test {
-  color: #212529;
+.most-picked {
+  margin-bottom: 200px;
+}
+.most-picked .title {
+  color: #152C5B;
+  margin-bottom: 30px;
+}
+.most-picked .gallery {
+  display: flex;
+  gap: 30px;
+}
+@media (max-width: 960px) {
+  .most-picked .gallery {
+    flex-direction: column;
+  }
+}
+.most-picked .gallery .card {
+  border-radius: 15px;
+  position: relative;
+  border: none;
+  color: white;
+  overflow: hidden;
+}
+.most-picked .gallery .card img {
+  border-radius: inherit;
+  filter: brightness(80%);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.most-picked .gallery .card .price {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #FF498B;
+  padding: 10px 20px;
+  border-radius: 0 15px 0 15px;
+}
+.most-picked .gallery .card .details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 0 20px 20px;
+}
+.most-picked .gallery .card .details .hotels {
+  font-size: 20px;
+}
+.most-picked .gallery .card .details .location {
+  font-weight: 300;
+}
+.most-picked .gallery .card-big {
+  flex: 1;
+  width: 100%;
+  height: 460px;
+}
+@media (max-width: 960px) {
+  .most-picked .gallery .card-big {
+    max-height: 300px;
+  }
+}
+.most-picked .gallery .others {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.most-picked .gallery .others .card {
+  height: 215px;
+  min-width: calc(50% - 15px);
 }
 
 * {

@@ -1,8 +1,11 @@
 @use './custom' as *;
 //layout
 @use './layout/header';
-@use './modules/hero';
 @use './layout/footer';
+
+//landing-page
+@use './modules/hero';
+@use './modules/most-picked';
 
 
 * {
