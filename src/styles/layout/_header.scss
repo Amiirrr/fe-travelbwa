@@ -1,0 +1,30 @@
+@use '../custom' as *;
+
+header {
+    border-bottom: 1px solid $gray-200;
+    width: 100%;
+    position: relative;
+
+    .navbar {
+        height: 80px;
+
+        .navbar-nav {
+
+            li.nav-item {
+                a {
+                    &.nav-link {
+                        color: $secondary;
+                        padding: 0 1rem;
+                        font-weight: 500;
+
+                        &:hover {
+                            // text-decoration: underline;
+                            color: $primary;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

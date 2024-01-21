@@ -4,6 +4,7 @@ import AppRouter from './Router'
 
 // import '@/assets/scss/style.scss'
 import '@/assets/css/style.css'
+// import '@/styles/style.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

@@ -1,41 +1,29 @@
-@use '../assets/scss/bootstrap.scss' as *;
-@use '../elements/Button/index.scss';
+@use './custom' as *;
+//layout
+@use './layout/header';
+@use './modules/hero';
+@use './layout/footer';
 
-html {
+
+* {
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
+p,
+h1 {
+    margin: 0;
+}
+
+//IconText
 .brand-text-icon {
     font-size: 26px;
     font-weight: 500;
     font-family: "Poppins", sans-serif;
-    color: $primary ;
-    text-decoration: none
-}
+    color: $indigo;
+    text-decoration: none;
 
-header {
-    border-bottom: 1px solid $gray-200;
-    width: 100%;
-    position: relative;
-
-    .navbar {
-        height: 80px;
-
-        g .navbar-nav {
-
-            li.nav-item {
-                a {
-                    &.nav-link {
-                        color: $gray-900;
-                        padding: 0 1rem;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-
-                    }
-                }
-            }
-        }
+    span {
+        color: $secondary !important;
     }
 }

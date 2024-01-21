@@ -1,0 +1,7 @@
+@use '../custom' as *;
+
+.footer {
+    .test {
+        color: $gray-900;
+    }
+}
