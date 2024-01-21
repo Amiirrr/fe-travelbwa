@@ -2,14 +2,14 @@
 
 .most-picked {
     $card_height : 215px;
-    margin-bottom: 200px;
+    margin-bottom: 70px;
 
     .title {
         color: $secondary;
         margin-bottom: 30px;
     }
 
-    .gallery {
+    .items {
         display: flex;
         gap: 30px;
 
@@ -37,7 +37,7 @@
                 top: 0;
                 right: 0;
 
-                background-color: #FF498B;
+                background-color: $pink;
                 padding: 10px 20px;
                 border-radius: 0 15px 0 15px;
             }
@@ -48,7 +48,7 @@
                 left: 0;
                 margin: 0 0 20px 20px;
 
-                .hotels {
+                .name {
                     font-size: 20px;
                 }
 
@@ -79,10 +79,5 @@
                 min-width: calc(50% - 15px);
             }
         }
-
     }
-
-
-
-
 }

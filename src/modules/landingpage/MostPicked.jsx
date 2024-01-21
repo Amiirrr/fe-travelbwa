@@ -2,70 +2,49 @@ import React from 'react'
 
 import img1 from '@/assets/img/mostpicked-1.png'
 
-const MostPicked = () => {
+const MostPicked = ({ data }) => {
 
-    // function card(props) {
+    function Card({ isBig, price, unit, city, country, name }) {
 
-    //     if (props === "big") {
-    //         return (
-    //             <div className='card '>
-
-    //             </div>
-    //         )
-
-    //     }
-    // }
-
-    // console.log(card("big"))
-
-
+        return (
+            <div className={`card ${isBig ? 'card-big' : ''}`}>
+                <img src={img1} alt="blue origin farms" />
+                <p className='price'>${price} per {unit}</p>
+                <div className='details'>
+                    <p className='name'>{name}</p>
+                    <p className='location'>{city}, {country}</p>
+                </div>
+            </div>
+        )
+    }
 
     return (
         <section className='most-picked container'>
             <h4 className='title'>Most Picked</h4>
-            <div className='gallery'>
-                <div className='card card-big'>
-                    <img src={img1} alt="blue origin farms" />
-                    <p className='price'>$50 per night</p>
-                    <div className='details'>
-                        <p className='hotels'>Blue Origin Fams</p>
-                        <p className='location'>Jakarta, Indonesia</p>
-                    </div>
-                </div>
+            <div className='items'>
+                <Card
+                    isBig
+                    price={data[0].price}
+                    unit={data[0].unit}
+                    city={data[0].city}
+                    country={data[0].country}
+                    name={data[0].name}
+                />
                 <div className='others'>
-                    <div className='card'>
-                        <img src={img1} alt="blue origin farms" />
-                        <p className='price'>$50 per night</p>
-                        <div className='details'>
-                            <p className='hotels'>Blue Origin Fams</p>
-                            <p className='location'>Jakarta, Indonesia</p>
-                        </div>
-                    </div>
-                    <div className='card'>
-                        <img src={img1} alt="blue origin farms" />
-                        <p className='price'>$50 per night</p>
-                        <div className='details'>
-                            <p className='hotels'>Blue Origin Fams</p>
-                            <p className='location'>Jakarta, Indonesia</p>
-                        </div>
-                    </div>
-                    <div className='card'>
-                        <img src={img1} alt="blue origin farms" />
-                        <p className='price'>$50 per night</p>
-                        <div className='details'>
-                            <p className='hotels'>Blue Origin Fams</p>
-                            <p className='location'>Jakarta, Indonesia</p>
-                        </div>
-                    </div>
-                    <div className='card'>
-                        <img src={img1} alt="blue origin farms" />
-                        <p className='price'>$50 per night</p>
-                        <div className='details'>
-                            <p className='hotels'>Blue Origin Fams</p>
-                            <p className='location'>Jakarta, Indonesia</p>
-                        </div>
-                    </div>
-
+                    {
+                        data.slice(1).map((item, index) => {
+                            return (
+                                <Card
+                                    key={index}
+                                    price={item.price}
+                                    unit={item.unit}
+                                    city={item.city}
+                                    country={item.country}
+                                    name={item.name}
+                                />
+                            )
+                        })
+                    }
                 </div>
             </div>
         </section>

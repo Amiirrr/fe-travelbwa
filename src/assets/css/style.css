@@ -79,29 +79,29 @@ header .navbar .navbar-nav li.nav-item a.nav-link:hover {
 }
 
 .most-picked {
-  margin-bottom: 200px;
+  margin-bottom: 70px;
 }
 .most-picked .title {
   color: #152C5B;
   margin-bottom: 30px;
 }
-.most-picked .gallery {
+.most-picked .items {
   display: flex;
   gap: 30px;
 }
 @media (max-width: 960px) {
-  .most-picked .gallery {
+  .most-picked .items {
     flex-direction: column;
   }
 }
-.most-picked .gallery .card {
+.most-picked .items .card {
   border-radius: 15px;
   position: relative;
   border: none;
   color: white;
   overflow: hidden;
 }
-.most-picked .gallery .card img {
+.most-picked .items .card img {
   border-radius: inherit;
   filter: brightness(80%);
   width: 100%;
@@ -109,7 +109,7 @@ header .navbar .navbar-nav li.nav-item a.nav-link:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.most-picked .gallery .card .price {
+.most-picked .items .card .price {
   position: absolute;
   top: 0;
   right: 0;
@@ -117,37 +117,95 @@ header .navbar .navbar-nav li.nav-item a.nav-link:hover {
   padding: 10px 20px;
   border-radius: 0 15px 0 15px;
 }
-.most-picked .gallery .card .details {
+.most-picked .items .card .details {
   position: absolute;
   bottom: 0;
   left: 0;
   margin: 0 0 20px 20px;
 }
-.most-picked .gallery .card .details .hotels {
+.most-picked .items .card .details .name {
   font-size: 20px;
 }
-.most-picked .gallery .card .details .location {
+.most-picked .items .card .details .location {
   font-weight: 300;
 }
-.most-picked .gallery .card-big {
+.most-picked .items .card-big {
   flex: 1;
   width: 100%;
   height: 460px;
 }
 @media (max-width: 960px) {
-  .most-picked .gallery .card-big {
+  .most-picked .items .card-big {
     max-height: 300px;
   }
 }
-.most-picked .gallery .others {
+.most-picked .items .others {
   flex: 2;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.most-picked .gallery .others .card {
+.most-picked .items .others .card {
   height: 215px;
   min-width: calc(50% - 15px);
+}
+
+.category {
+  margin-bottom: 70px;
+}
+.category .title {
+  margin-bottom: 30px;
+  color: #152C5B;
+}
+.category .items {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+}
+.category .items .card {
+  flex: 1;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 250px;
+  overflow: hidden;
+  max-width: 301px;
+  min-width: 301px;
+  position: relative;
+}
+.category .items .card img {
+  border-radius: 15px;
+  flex: 1;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.category .items .card .details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.category .items .card .details .name {
+  font-size: 20px;
+  color: #152C5B;
+  font-weight: 500;
+}
+.category .items .card .details .locations {
+  color: #ced4da;
+}
+.category .items .card .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #FF498B;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 0 15px 0 15px;
+  padding: 10px 20px;
+}
+.category .items .card .badge span {
+  font-weight: 400;
 }
 
 * {

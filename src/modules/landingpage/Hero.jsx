@@ -8,7 +8,6 @@ import imgBanner from '@/assets/img/banner.png'
 import Button from '@/components/Button';
 
 const Hero = ({ data }) => {
-    console.log(data)
     return (
         <section className='hero container'>
             <div className='content'>
