@@ -31,7 +31,7 @@ const Header = (props) => {
                                 </Button>
                             </li>
                             <li className={`nav-item ${getNavLinkClass('/')}`}>
-                                <Button className="nav-link" type="link" href="/agents">
+                                <Button className="nav-link" type="link" href="/detail">
                                     Agents
                                 </Button>
                             </li>

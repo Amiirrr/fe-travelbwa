@@ -4,15 +4,19 @@
   "type": "Hotel",
   "imageUrls": [
     {
-      "_id": "asd1293uasdads1",
+      "_id": "img1",
       "url": "/images/img-featured-1.jpg"
     },
     {
-      "_id": "asd1293uasdads1",
+      "_id": "img2",
       "url": "/images/img-featured-2.jpg"
     },
     {
-      "_id": "asd1293uasdads1",
+      "_id": "img3",
+      "url": "/images/img-featured-3.jpg"
+    },
+    {
+      "_id": "img4",
       "url": "/images/img-featured-3.jpg"
     }
   ],

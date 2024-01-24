@@ -1,0 +1,46 @@
+@use '../custom' as *;
+
+.desc-detail {
+
+    .title {
+        color: $secondary;
+        margin-bottom: 10px;
+    }
+
+    .desc {
+        font-weight: 200;
+        color: $gray-500;
+        line-height: 1.75rem;
+        margin-bottom: 30px;
+    }
+
+    .features {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .item {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            img {
+                width: fit-content;
+            }
+
+            p {
+                color: $gray-400;
+                font-weight: 300;
+
+                span {
+                    font-weight: 600;
+                    color: $secondary;
+                }
+            }
+
+        }
+    }
+}

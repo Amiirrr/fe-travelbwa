@@ -1,0 +1,53 @@
+@use '../custom' as *;
+
+.booking-form {
+    padding: 60px 80px;
+    border: 1px solid $gray-300;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+    .input-number,
+    .input-date,
+    .title,
+    .price {
+        margin-bottom: 20px;
+    }
+
+    .title {
+        color: $secondary;
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 36px;
+        color: $gray-500;
+        font-weight: 200 !important;
+
+        span {
+            color: $green;
+            font-weight: 500;
+        }
+    }
+
+    label {
+        color: $secondary;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+
+
+
+    .total-price {
+        color: $gray-500;
+        font-weight: 300;
+        margin-bottom: 40px;
+
+        span {
+            color: $secondary;
+            font-weight: 500;
+        }
+    }
+
+}

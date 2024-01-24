@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import LandingPage from "@/pages/LandingPage";
+import DetailsPage from "./pages/DetailsPage";
 
 function AppRouter() {
     return (
@@ -10,6 +11,7 @@ function AppRouter() {
                 <Route path="/browse-by" element={<LandingPage />} />
                 <Route path="/stories" element={<LandingPage />} />
                 <Route path="/agents" element={<LandingPage />} />
+                <Route path="/detail" element={<DetailsPage />} />
             </Routes>
         </Router>
     );

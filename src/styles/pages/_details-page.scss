@@ -1,0 +1,15 @@
+.section-detail {
+    display: flex;
+    gap: 50px;
+    margin-bottom: 70px;
+
+    .desc-detail {
+        flex: 6;
+    }
+
+    .booking-form {
+        flex: 4;
+        max-width: 487px;
+    }
+
+}

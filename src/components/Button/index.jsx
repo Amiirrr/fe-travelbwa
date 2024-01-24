@@ -10,7 +10,7 @@ const Button = (props) => {
     if (props.isLarge) className.push('btn-lg')
     if (props.isSmall) className.push('btn-sm')
     if (props.isBlock) className.push('btn-block')
-    if (props.hasShadow) className.push('shadow')
+    if (props.hasShadow) className.push('btn-shadow')
 
     const onClick = () => {
         if (props.onClick) props.onClick()

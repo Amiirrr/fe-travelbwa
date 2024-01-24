@@ -9,16 +9,14 @@
 @use './modules//categories';
 @use './modules/testimony';
 
-
-* {
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-}
-
-p,
-h1 {
-    margin: 0;
-}
+//detail-page
+@use './pages/details-page';
+@use './modules/heading-detail';
+@use './modules/booking-form';
+@use './modules/futured-image';
+@use './modules/desc-detailpage';
+@use '../components/Form/InputNumber/index' as InputNumber;
+@use '../components/Form/InputDate/index' as InputDate;
 
 //IconText
 .brand-text-icon {
@@ -31,4 +29,18 @@ h1 {
     span {
         color: $secondary !important;
     }
+}
+
+//--------------------------------Utils
+
+//rating
+.rating {
+    display: flex;
+    gap: 2px;
+    width: 30px;
+
+    img {
+        width: 100%;
+    }
+
 }
