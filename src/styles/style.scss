@@ -18,6 +18,9 @@
 @use '../components/Form/InputNumber/index' as InputNumber;
 @use '../components/Form/InputDate/index' as InputDate;
 
+//Stepper
+@use '../components/Stepper/index' as Stepper;
+
 //IconText
 .brand-text-icon {
     font-size: 26px;

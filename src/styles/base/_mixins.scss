@@ -1,7 +1,6 @@
-@mixin font-color {
-    color: red;
-}
+@use '../custom' as *;
 
-@mixin bg-color {
-    color: red;
+@mixin heading-2 {
+    font-size: 36px;
+    color: $secondary;
 }

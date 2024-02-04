@@ -9,6 +9,7 @@ import Testimony from '@/modules/Testimony'
 import Footer from '@/components/layout/Footer'
 
 const LandingPage = () => {
+
     return (
         <div>
             <Header />

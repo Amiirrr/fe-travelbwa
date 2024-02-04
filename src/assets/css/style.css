@@ -535,6 +535,89 @@ footer p {
   top: 100%;
 }
 
+.meta {
+  text-align: center;
+}
+.meta .title {
+  font-size: 36px;
+  color: #152C5B;
+  margin-bottom: 10px;
+}
+.meta .desc {
+  font-size: 18px;
+  color: #ced4da;
+  font-weight: 300;
+}
+
+.numbering {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.numbering ol {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.numbering ol::before {
+  content: "";
+  top: 50%;
+  height: 2px;
+  background-color: #F5F6F8;
+  position: absolute;
+  width: 90%;
+}
+.numbering ol li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  list-style: none;
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #adb5bd;
+}
+.numbering ol li::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  background-color: #F5F6F8;
+}
+.numbering ol li::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: #1ABC9C;
+  background-image: url('data:image/svg+xml;utf8,<svg width="30" height="21" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.62961 8.52668L7.82252 17.2306C8.46805 18.3126 9.94113 18.5354 10.8778 17.6927L27.1842 3.02177" stroke="white" stroke-width="4" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 0.35s transform ease-in-out;
+}
+.numbering ol li.active {
+  border: 1px solid #F5F6F8;
+  border-radius: 50%;
+}
+.numbering ol li.active::after {
+  content: none;
+}
+.numbering ol li.active ~ li:after {
+  content: none;
+}
+
 .brand-text-icon {
   font-size: 26px;
   font-weight: 500;

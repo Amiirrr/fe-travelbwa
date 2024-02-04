@@ -1,0 +1,100 @@
+@use '../../styles/custom' as *;
+@use '../../styles/base/mixins';
+
+$numberingSize: 60px;
+$numberingBgColor: $gray-200;
+
+//Meta
+.meta {
+    text-align: center;
+
+    .title {
+        @include mixins.heading-2();
+        margin-bottom: 10px;
+    }
+
+    .desc {
+        font-size: 18px;
+        color: $gray-400;
+        font-weight: 300;
+    }
+}
+
+.numbering {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    ol {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            top: 50%;
+            height: 2px;
+            background-color: $numberingBgColor;
+            position: absolute;
+            width: 90%;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: $numberingSize;
+            height: $numberingSize;
+            list-style: none;
+            position: relative;
+            font-size: 24px;
+            font-weight: 500;
+            color: $gray-500;
+
+            &::before {
+                content: "";
+                width: $numberingSize - 10px;
+                height: $numberingSize - 10px;
+                position: absolute;
+                z-index: -1;
+                border-radius: 50%;
+                background-color: $numberingBgColor;
+            }
+
+            &::after {
+                content: "";
+                width: $numberingSize;
+                height: $numberingSize;
+                position: absolute;
+                z-index: 2;
+                border-radius: 50%;
+                background-color: $green;
+                background-image: url('data:image/svg+xml;utf8,<svg width="30" height="21" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.62961 8.52668L7.82252 17.2306C8.46805 18.3126 9.94113 18.5354 10.8778 17.6927L27.1842 3.02177" stroke="white" stroke-width="4" stroke-linecap="round"/></svg>');
+                background-repeat: no-repeat;
+                background-position: center;
+                transition: 0.35s transform ease-in-out;
+            }
+
+            &.active {
+                border: 1px solid $numberingBgColor;
+                border-radius: 50%;
+
+                &::after {
+                    content: none;
+                }
+
+                &~li {
+                    &:after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+}

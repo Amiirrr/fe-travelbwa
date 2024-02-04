@@ -15,7 +15,6 @@ const InputDate = (props) => {
     const [isShowed, setIsShowed] = useState(false);
 
     const displayDate = `${value.startDate ? formatDate(value.startDate) : ""}${value.endDate ? " - " + formatDate(value.endDate) : ""}`;
-    // const displayDate = `${value.startDate ? value.startDate : ""}${value.endDate ? " - " + value.endDate : ""}`;
 
     const handleClickOutside = (event) => {
         if (refDate && !refDate.current.contains(event.target)) {
