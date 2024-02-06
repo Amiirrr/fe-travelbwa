@@ -202,6 +202,34 @@ footer p {
 .input-text input:focus {
   outline: none;
 }
+.input-text input[type=file]::-webkit-file-upload-button {
+  display: none;
+}
+
+.input-file input:first-child {
+  display: none;
+}
+.input-file input {
+  border: none;
+  background-color: #F5F6F8;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 320px;
+  color: #152C5B;
+}
+.input-file input::-moz-placeholder {
+  color: #ced4da;
+}
+.input-file input::placeholder {
+  color: #ced4da;
+}
+.input-file input:focus {
+  outline: none;
+}
+.input-file input[type=file]::-webkit-file-upload-button {
+  display: none;
+}
 
 .hero {
   display: flex;
@@ -717,6 +745,49 @@ footer p {
   margin-bottom: 20px;
 }
 .booking_information .form div label {
+  color: #152C5B;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.payment {
+  display: flex;
+  color: #152C5B;
+  flex-wrap: wrap;
+}
+.payment .info,
+.payment .form {
+  padding: 30px 80px;
+  flex: 1 0 50%;
+}
+.payment .info {
+  padding-left: 200px;
+}
+.payment .info .title {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.payment .info .detail-pembayaran {
+  margin-bottom: 20px;
+}
+.payment .info .detail-pembayaran p {
+  margin-bottom: 10px;
+}
+.payment .info .detail-pembayaran p span {
+  font-weight: 500;
+}
+.payment .info .bank figure {
+  display: flex;
+  gap: 20px;
+}
+.payment .form {
+  width: 100%;
+  border-left: 3px solid #F5F6F8;
+}
+.payment .form div {
+  margin-bottom: 20px;
+}
+.payment .form div label {
   color: #152C5B;
   font-weight: 500;
   margin-bottom: 8px;

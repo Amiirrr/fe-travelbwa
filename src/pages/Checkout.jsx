@@ -30,8 +30,6 @@ const Checkout = () => {
         });
     };
 
-    console.log(data)
-
     const steps = {
         bookingInformation: {
             title: "Booking Information",
@@ -50,10 +48,10 @@ const Checkout = () => {
             description: "Kindly follow the instructions below",
             content: (
                 <Payment
-                //       data={data}
-                //       ItemDetails={page[checkout._id]}
-                //       checkout={checkout}
-                //       onChange={this.onChange}
+                    data={data}
+                    //       ItemDetails={page[checkout._id]}
+                    //       checkout={checkout}
+                    onChange={onChange}
                 />
             ),
         },
@@ -67,7 +65,7 @@ const Checkout = () => {
         <>
             <Header />
             <div className='checkout'>
-                <Stepper steps={steps} initialStep="bookingInformation" className='stepper'>
+                <Stepper steps={steps} initialStep="payment" className='stepper'>
                     {(prevStep, nextStep, CurrentStep, steps) => (
                         <>
                             <Numbering data={steps} current={CurrentStep} />

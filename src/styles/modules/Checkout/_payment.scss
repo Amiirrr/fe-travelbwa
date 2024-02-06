@@ -1,0 +1,57 @@
+@use '../../custom' as *;
+
+.payment {
+    display: flex;
+    color: $secondary;
+    flex-wrap: wrap;
+
+    .info,
+    .form {
+        padding: 30px 80px;
+        flex: 1 0 50%;
+    }
+
+    .info {
+        padding-left: 200px;
+
+        .title {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .detail-pembayaran {
+            margin-bottom: 20px;
+
+            p {
+                margin-bottom: 10px;
+
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .bank {
+            figure {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+
+    .form {
+        width: 100%;
+        border-left: 3px solid $gray-200;
+
+        div {
+            margin-bottom: 20px;
+
+            label {
+                color: $secondary;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+}

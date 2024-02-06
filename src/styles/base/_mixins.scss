@@ -26,3 +26,28 @@
         font-weight: 500;
     }
 }
+
+@mixin form-input-checkout {
+    input {
+        border: none;
+        background-color: $gray-200;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 320px;
+        color: $secondary;
+
+        &::placeholder {
+            color: $gray-400;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &[type="file"]::-webkit-file-upload-button {
+            display: none;
+        }
+
+    }
+}

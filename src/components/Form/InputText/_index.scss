@@ -20,6 +20,9 @@
             outline: none;
         }
 
+        &[type="file"]::-webkit-file-upload-button {
+            display: none;
+        }
 
     }
 }

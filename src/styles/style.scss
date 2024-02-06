@@ -7,6 +7,7 @@
 @use '../components/Form/InputDate/index' as InputDate;
 @use '../components/Form/InputNumber/index' as InputNumber;
 @use '../components/Form/InputText/index' as InputText;
+@use '../components/Form/InputFile/index' as InputFile;
 
 //landing-page
 @use './modules/hero';

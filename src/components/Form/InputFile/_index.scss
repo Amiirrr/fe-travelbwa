@@ -1,0 +1,11 @@
+@use '../../../styles/base/mixins';
+
+.input-file {
+
+    input:first-child {
+        display: none; // menyembunyikan input pertama
+    }
+
+    @include mixins.form-input-checkout();
+
+}
