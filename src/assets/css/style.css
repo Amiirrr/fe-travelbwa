@@ -750,6 +750,27 @@ footer p {
   margin-bottom: 8px;
 }
 
+.completed .info {
+  display: flex;
+  justify-content: center;
+}
+.completed figure {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  gap: 20px;
+}
+.completed figure img {
+  width: 100%;
+  height: 100%;
+}
+.completed figure p {
+  text-align: center;
+  color: #dee2e6;
+  font-weight: 200;
+  font-size: 18px;
+}
+
 .payment {
   display: flex;
   color: #152C5B;

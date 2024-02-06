@@ -10,6 +10,7 @@ import Stepper, {
 
 import BookingInformation from '@/modules/Checkout/BookingInformation';
 import Payment from '@/modules/Checkout/Payment';
+import Completed from '@/modules/Checkout/Completed';
 
 const Checkout = () => {
 
@@ -58,14 +59,14 @@ const Checkout = () => {
         completed: {
             title: "Yay! Completed",
             description: null,
-            //   content: <Completed />,
+            content: <Completed />,
         },
     };
     return (
         <>
             <Header />
             <div className='checkout'>
-                <Stepper steps={steps} initialStep="payment" className='stepper'>
+                <Stepper steps={steps} initialStep="completed" className='stepper'>
                     {(prevStep, nextStep, CurrentStep, steps) => (
                         <>
                             <Numbering data={steps} current={CurrentStep} />
