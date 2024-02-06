@@ -12,7 +12,26 @@ import BookingInformation from '@/modules/Checkout/BookingInformation';
 import Payment from '@/modules/Checkout/Payment';
 import Completed from '@/modules/Checkout/Completed';
 
-const Checkout = () => {
+const Checkout = (props) => {
+
+    const {
+        // checkout,
+        page
+    } = props
+
+    const [checkout, SetCheckout] = useState({
+        id: 1,
+        duration: 2
+    })
+
+    function submit(nextStep) {
+        console.log("submit");
+        nextStep();
+    }
+
+    function home() {
+        window.location.href = '/';
+    }
 
     const [data, setData] = useState({
         firstName: "",
@@ -62,11 +81,13 @@ const Checkout = () => {
             content: <Completed />,
         },
     };
+    console.log(data)
+
     return (
         <>
             <Header />
             <div className='checkout'>
-                <Stepper steps={steps} initialStep="completed" className='stepper'>
+                <Stepper steps={steps} initialStep="payment" className='stepper'>
                     {(prevStep, nextStep, CurrentStep, steps) => (
                         <>
                             <Numbering data={steps} current={CurrentStep} />
@@ -75,26 +96,59 @@ const Checkout = () => {
 
                             <MainContent data={steps} current={CurrentStep} />
 
-                            <Controller>
-                                <Button
-                                    type='button'
-                                    isPrimary
-                                    hasShadow
-                                    onclick={prevStep}
+                            {CurrentStep === "bookingInformation" && (
+                                <Controller>
+                                    {
+                                        (data.firstName !== "" &&
+                                            data.lastName !== "" &&
+                                            data.email !== "" &&
+                                            data.phone !== "") && (
+                                            <Button
+                                                type='button'
+                                                isPrimary
+                                                hasShadow
+                                                onClick={nextStep}
 
-                                >
-                                    Continue to Book
-                                </Button>
-                                <Button
-                                    type='button'
-                                    isLight
-                                    onclick={prevStep}
+                                            >
+                                                Continue to Book
+                                            </Button>
+                                        )
+                                    }
+                                    <Button
+                                        type='button'
+                                        isLight
+                                        onClick={home}
+                                    >
+                                        Cancel
+                                    </Button>
+                                </Controller>
+                            )}
 
-                                >
-                                    Cancel
-                                </Button>
-                            </Controller>
-
+                            {CurrentStep === "payment" && (
+                                <Controller>
+                                    {
+                                        (data.proofPayment !== "" &&
+                                            data.bankName !== "" &&
+                                            data.bankHolder !== "") && (
+                                            <Button
+                                                type='button'
+                                                isPrimary
+                                                hasShadow
+                                                onClick={() => submit(nextStep)}
+                                            >
+                                                Continue to Book
+                                            </Button>
+                                        )
+                                    }
+                                    <Button
+                                        type='button'
+                                        isLight
+                                        onClick={prevStep}
+                                    >
+                                        Cancel
+                                    </Button>
+                                </Controller>
+                            )}
                         </>
                     )}
                 </Stepper>

@@ -66,6 +66,7 @@ const Button = (props) => {
             )
         }
     }
+    // console.log(props.onClick)
 
     return (
         <button
