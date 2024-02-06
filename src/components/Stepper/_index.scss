@@ -7,6 +7,7 @@ $numberingBgColor: $gray-200;
 //Meta
 .meta {
     text-align: center;
+    margin-bottom: 50px;
 
     .title {
         @include mixins.heading-2();
@@ -27,6 +28,7 @@ $numberingBgColor: $gray-200;
     padding: 0;
     margin: 0;
     position: relative;
+    margin-bottom: 50px;
 
     ol {
         display: flex;

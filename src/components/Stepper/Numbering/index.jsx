@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 
 const Numbering = ({ style, className, data, current }) => {
 
-    console.log(data)
-
     const KeysOfData = Object.keys(data);
 
     return (

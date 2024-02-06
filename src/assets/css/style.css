@@ -19,6 +19,11 @@ span {
   box-shadow: 5px 5px 20px rgba(50, 82, 223, 0.5);
 }
 
+.wrapper {
+  margin: auto;
+  max-width: 1296px;
+}
+
 header {
   border-bottom: 1px solid #F5F6F8;
   width: 100%;
@@ -76,6 +81,115 @@ footer .information h5 {
 }
 footer p {
   color: #ced4da;
+}
+
+.input-date {
+  height: 45px;
+  display: flex;
+  height: 45px;
+  background-color: #F5F6F8;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 4px;
+  position: relative;
+  width: 100%;
+}
+.input-date input.form-input {
+  height: inherit !important;
+  display: flex;
+  text-align: center;
+  border-radius: 0px !important;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  font-weight: 500;
+  color: #152C5B;
+  cursor: pointer;
+  width: 100%;
+}
+.input-date .icon {
+  min-width: 45px;
+  background-color: #152C5B;
+  display: flex;
+  border-radius: 4px;
+  cursor: pointer;
+  justify-content: center;
+}
+.input-date .icon img {
+  width: 60%;
+}
+.input-date .date-range-wrapper {
+  position: absolute;
+  top: 100%;
+}
+
+.input-number {
+  display: flex;
+  height: 45px;
+  background-color: #F5F6F8;
+  width: 100%;
+  border-radius: 4px;
+}
+.input-number input.form-input {
+  height: inherit !important;
+  display: flex;
+  text-align: center;
+  border-radius: 0px !important;
+  border: none;
+  background-color: transparent;
+  outline: 0;
+  font-weight: 500;
+  color: #152C5B;
+  width: 100%;
+}
+.input-number .input-group-text {
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0;
+  height: 45px;
+  width: 45px;
+  font-weight: 600;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-number .input-group-text.minus {
+  background-color: #E74C3C;
+  transition: background-color 0.3s;
+}
+.input-number .input-group-text.plus {
+  background-color: #1ABC9C;
+  transition: background-color 0.3s;
+}
+.input-number .input-group-text:active {
+  filter: brightness(80%);
+}
+
+.input-text {
+  width: 100%;
+}
+.input-text input {
+  border: none;
+  background-color: #F5F6F8;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 320px;
+  color: #152C5B;
+}
+.input-text input::-moz-placeholder {
+  color: #ced4da;
+}
+.input-text input::placeholder {
+  color: #ced4da;
+}
+.input-text input:focus {
+  outline: none;
 }
 
 .hero {
@@ -376,7 +490,7 @@ footer p {
 }
 .booking-form .total-price {
   color: #adb5bd;
-  font-weight: 300;
+  font-weight: 200;
   margin-bottom: 40px;
 }
 .booking-form .total-price span {
@@ -448,95 +562,9 @@ footer p {
   color: #152C5B;
 }
 
-.input-number {
-  display: flex;
-  height: 45px;
-  background-color: #F5F6F8;
-  width: 100%;
-  border-radius: 4px;
-}
-.input-number input.form-input {
-  height: inherit !important;
-  display: flex;
-  text-align: center;
-  border-radius: 0px !important;
-  border: none;
-  background-color: transparent;
-  outline: 0;
-  font-weight: 500;
-  color: #152C5B;
-  width: 100%;
-}
-.input-number .input-group-text {
-  cursor: pointer;
-  border-radius: 4px;
-  border: 0;
-  height: 45px;
-  width: 45px;
-  font-weight: 600;
-  font-size: 20px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.input-number .input-group-text.minus {
-  background-color: #E74C3C;
-  transition: background-color 0.3s;
-}
-.input-number .input-group-text.plus {
-  background-color: #1ABC9C;
-  transition: background-color 0.3s;
-}
-.input-number .input-group-text:active {
-  filter: brightness(80%);
-}
-
-.input-date {
-  height: 45px;
-  display: flex;
-  height: 45px;
-  background-color: #F5F6F8;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-radius: 4px;
-  position: relative;
-  width: 100%;
-}
-.input-date input.form-input {
-  height: inherit !important;
-  display: flex;
-  text-align: center;
-  border-radius: 0px !important;
-  border: none;
-  background-color: transparent;
-  outline: 0;
-  font-weight: 500;
-  color: #152C5B;
-  cursor: pointer;
-  width: 100%;
-}
-.input-date .icon {
-  min-width: 45px;
-  background-color: #152C5B;
-  display: flex;
-  border-radius: 4px;
-  cursor: pointer;
-  justify-content: center;
-}
-.input-date .icon img {
-  width: 60%;
-}
-.input-date .date-range-wrapper {
-  position: absolute;
-  top: 100%;
-}
-
 .meta {
   text-align: center;
+  margin-bottom: 50px;
 }
 .meta .title {
   font-size: 36px;
@@ -556,6 +584,7 @@ footer p {
   padding: 0;
   margin: 0;
   position: relative;
+  margin-bottom: 50px;
 }
 .numbering ol {
   display: flex;
@@ -616,6 +645,65 @@ footer p {
 }
 .numbering ol li.active ~ li:after {
   content: none;
+}
+
+.booking_information {
+  display: flex;
+}
+.booking_information .info,
+.booking_information .form {
+  padding: 30px 80px;
+  flex: 1;
+}
+.booking_information .info {
+  overflow: hidden;
+}
+.booking_information .info figure img {
+  width: 100%;
+  height: 270px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.booking_information .info figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.booking_information .info .name {
+  font-size: 20px;
+  color: #152C5B;
+  font-weight: 500;
+}
+.booking_information .info .location {
+  font-size: 16px;
+  color: #ced4da;
+  font-weight: 200;
+}
+.booking_information .info .total-price {
+  color: #adb5bd;
+  font-weight: 200;
+}
+.booking_information .info .total-price span {
+  color: #152C5B;
+  font-weight: 500;
+}
+.booking_information .form {
+  border-left: 3px solid #F5F6F8;
+}
+.booking_information .form div {
+  margin-bottom: 20px;
+}
+.booking_information .form div label {
+  color: #152C5B;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.checkout {
+  margin-top: 50px;
 }
 
 .brand-text-icon {

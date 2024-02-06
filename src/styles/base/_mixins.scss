@@ -4,3 +4,25 @@
     font-size: 36px;
     color: $secondary;
 }
+
+@mixin hotel-name-card {
+    font-size: 20px;
+    color: $secondary;
+    font-weight: 500;
+}
+
+@mixin location-name-card {
+    font-size: 16px;
+    color: $gray-400;
+    font-weight: 200;
+}
+
+@mixin total-price {
+    color: $gray-500;
+    font-weight: 200;
+
+    span {
+        color: $secondary;
+        font-weight: 500;
+    }
+}

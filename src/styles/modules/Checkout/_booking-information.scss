@@ -1,0 +1,61 @@
+@use '../../custom' as *;
+@use '../../base/mixins';
+
+.booking_information {
+    display: flex;
+
+    .info,
+    .form {
+        padding: 30px 80px;
+        flex: 1;
+    }
+
+    .info {
+        overflow: hidden;
+
+        figure {
+            img {
+                width: 100%;
+                height: 270px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+
+            figcaption {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+                flex-wrap: wrap
+            }
+        }
+
+        .name {
+            @include mixins.hotel-name-card();
+        }
+
+        .location {
+            @include mixins.location-name-card();
+        }
+
+        .total-price {
+            @include mixins.total-price();
+        }
+    }
+
+    .form {
+        border-left: 3px solid $gray-200;
+
+        div {
+            margin-bottom: 20px;
+
+            label {
+                color: $secondary;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+        }
+
+    }
+
+}

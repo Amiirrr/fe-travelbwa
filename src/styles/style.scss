@@ -3,6 +3,11 @@
 @use './layout/header';
 @use './layout/footer';
 
+//component
+@use '../components/Form/InputDate/index' as InputDate;
+@use '../components/Form/InputNumber/index' as InputNumber;
+@use '../components/Form/InputText/index' as InputText;
+
 //landing-page
 @use './modules/hero';
 @use './modules/most-picked';
@@ -15,11 +20,14 @@
 @use './modules/booking-form';
 @use './modules/futured-image';
 @use './modules/desc-detailpage';
-@use '../components/Form/InputNumber/index' as InputNumber;
-@use '../components/Form/InputDate/index' as InputDate;
 
-//Stepper
+//checkout
 @use '../components/Stepper/index' as Stepper;
+@use './modules/Checkout/booking-information';
+@use './modules/Checkout/completed';
+@use './modules/Checkout/payment';
+@use './pages/checkout';
+
 
 //IconText
 .brand-text-icon {
