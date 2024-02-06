@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-
 import Header from '@/components/layout/Header';
+import Button from '@/components/Button';
 import Stepper, {
     Numbering,
     Meta,
@@ -75,6 +75,27 @@ const Checkout = () => {
                             <Meta data={steps} current={CurrentStep} />
 
                             <MainContent data={steps} current={CurrentStep} />
+
+                            <Controller>
+                                <Button
+                                    type='button'
+                                    isPrimary
+                                    hasShadow
+                                    onclick={prevStep}
+
+                                >
+                                    Continue to Book
+                                </Button>
+                                <Button
+                                    type='button'
+                                    isLight
+                                    onclick={prevStep}
+
+                                >
+                                    Cancel
+                                </Button>
+                            </Controller>
+
                         </>
                     )}
                 </Stepper>

@@ -19,6 +19,17 @@ span {
   box-shadow: 5px 5px 20px rgba(50, 82, 223, 0.5);
 }
 
+.btn {
+  border: none;
+}
+
+.btn-light {
+  color: #adb5bd;
+}
+.btn-light:hover {
+  color: #fff;
+}
+
 .wrapper {
   margin: auto;
   max-width: 1296px;
@@ -584,7 +595,7 @@ footer p {
   padding: 0;
   margin: 0;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 .numbering ol {
   display: flex;
@@ -647,6 +658,15 @@ footer p {
   content: none;
 }
 
+.controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .booking_information {
   display: flex;
 }
@@ -703,7 +723,13 @@ footer p {
 }
 
 .checkout {
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.checkout .btn {
+  width: 80%;
+  max-width: 300px;
+  padding: 10px 0;
 }
 
 .brand-text-icon {

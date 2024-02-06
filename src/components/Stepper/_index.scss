@@ -28,7 +28,7 @@ $numberingBgColor: $gray-200;
     padding: 0;
     margin: 0;
     position: relative;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     ol {
         display: flex;
@@ -99,4 +99,14 @@ $numberingBgColor: $gray-200;
             }
         }
     }
+}
+
+//Controller
+.controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 20px;
 }
