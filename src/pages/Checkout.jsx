@@ -15,14 +15,14 @@ import Completed from '@/modules/Checkout/Completed';
 const Checkout = (props) => {
 
     const {
-        // checkout,
+        checkout,
         page
     } = props
 
-    const [checkout, SetCheckout] = useState({
-        id: 1,
-        duration: 2
-    })
+    // const [checkout, SetCheckout] = useState({
+    //     id: 1,
+    //     duration: 2
+    // })
 
     function submit(nextStep) {
         console.log("submit");
@@ -57,7 +57,7 @@ const Checkout = (props) => {
             content: (
                 <BookingInformation
                     data={data}
-                    // checkout={checkout}
+                    checkout={checkout}
                     // ItemDetails={page[checkout._id]}
                     onChange={onChange}
                 />
@@ -70,7 +70,7 @@ const Checkout = (props) => {
                 <Payment
                     data={data}
                     //       ItemDetails={page[checkout._id]}
-                    //       checkout={checkout}
+                    checkout={checkout}
                     onChange={onChange}
                 />
             ),
